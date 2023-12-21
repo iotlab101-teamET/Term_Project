@@ -1,4 +1,3 @@
-1) 각 방
-roo1.cpp, room2.cpp, room3.cpp 은 모두 동일한 코드로, 각 방에서 DHT센서와 조도센서를 통해 받은 데이터 값들을 서버로 보냅니다.
+#
 
-# LivingRoom.py / 
+# LivingRoom.py / Home.py / Room_1.py / Room_2.py / Room_3.py --> 실시간 온습도 데이터 모니터링을 위한 파이썬 코드

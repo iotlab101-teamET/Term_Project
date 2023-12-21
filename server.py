@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqtt
 from influxdb import InfluxDBClient
 from datetime import datetime
+import time
 
 port = 8086
 database = 'sensorDB'
@@ -206,6 +207,11 @@ def on_message(client, userdata, msg):
         elif sensor_topic == "fire":
             if data == 0:
                 client.publish("TeamET/Lroom/buzzer/cmd", "on")
+                client.publish("TeamET/room1/servo/cmd", "open")
+                client.publish("TeamET/room2/servo/cmd", "open")
+                client.publish("TeamET/room3/servo/cmd", "open")
+                client.publish("TeamET/Lroom/servo/cmd", "open")
+                time.sleep(6)
             elif data == 1:
                 client.publish("TeamET/Lroom/buzzer/cmd", "off")
 
